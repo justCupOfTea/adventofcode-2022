@@ -1,0 +1,16 @@
+dependencyResolutionManagement {
+    repositories {
+        mavenLocal()
+        mavenCentral()
+    }
+}
+
+buildCache {
+    local {
+        directory = "/.gradle/build-cache"
+    }
+}
+
+rootProject.name = 'adventofcode-2022'
+
+include 'Task'

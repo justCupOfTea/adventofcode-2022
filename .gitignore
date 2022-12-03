@@ -1,0 +1,10 @@
+.gradle
+gradle
+/**/build
+/**/out
+/**/generated
+.idea
+gradlew
+gradlew.bat
+gradle.properties
+/**/resources/session
