@@ -14,7 +14,7 @@ import java.util.Objects;
 public class ResourceManager implements Closeable {
     private final CloseableHttpClient client;
     private final BufferedReader reader;
-    private static final String sessionFileName= "session";
+    private static final String sessionFileName= "session.txt";
     private static final String sessionCookieName= "session";
     private static final String DOMAIN = ".adventofcode.com";
 

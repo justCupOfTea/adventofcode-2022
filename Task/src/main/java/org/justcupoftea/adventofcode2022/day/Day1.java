@@ -6,7 +6,14 @@ import java.util.Arrays;
 import java.util.Comparator;
 import java.util.List;
 
+
 public class Day1 extends AbstractTask<Integer> {
+
+
+    public Day1() {
+        super(1);
+    }
+
     @Override
     protected List<Integer> mapData(String data) {
         return Arrays.stream(data.split("\n\n"))
@@ -15,11 +22,6 @@ public class Day1 extends AbstractTask<Integer> {
                         .reduce(0, Integer::sum))
                 .sorted(Comparator.reverseOrder())
                 .toList();
-    }
-
-    @Override
-    protected int getDayNumber() {
-        return 1;
     }
 
     @Override
