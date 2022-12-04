@@ -16,7 +16,7 @@ public abstract class AbstractTask<T> implements Closeable {
     private final int dayNumber;
 
 
-    public static final String ERROR_PARAMS = "Не верное кол-во парамтеров. %s";
+    public static final String ERROR_PARAMS = "Не верное кол-во параметров. %s";
     public void printAnswers() {
         System.out.printf("Day %s:\n", getDayNumber());
         List<T> data = mapData(resourceManager.getData(String.format("https://adventofcode.com/2022/day/%d/input", getDayNumber())));
