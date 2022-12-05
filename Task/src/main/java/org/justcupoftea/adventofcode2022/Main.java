@@ -7,11 +7,13 @@ import org.justcupoftea.adventofcode2022.task.AbstractTask;
 import java.io.IOException;
 import java.util.Comparator;
 import java.util.List;
+import java.util.Stack;
 
 @Slf4j
 public class Main {
 
     private static final List<AbstractTask<?>> TASK_LIST = List.of(
+            new Day5(),
             new Day4(),
             new Day3(),
             new Day2(),
@@ -21,7 +23,7 @@ public class Main {
     public static void main(String[] args) {
         TASK_LIST.stream()
                 .sorted(Comparator.comparingInt(AbstractTask::getDayNumber))
-//                .filter(t -> t.getDayNumber() == 3)
+                .filter(t -> t.getDayNumber() == 5)
                 .forEach(AbstractTask::printAnswers);
         try {
             for (AbstractTask<?> abstractTask : TASK_LIST) {

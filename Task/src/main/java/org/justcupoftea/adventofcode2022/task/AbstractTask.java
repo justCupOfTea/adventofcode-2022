@@ -7,6 +7,7 @@ import lombok.RequiredArgsConstructor;
 import java.io.Closeable;
 import java.io.IOException;
 import java.util.List;
+import java.util.Objects;
 
 @Getter
 @RequiredArgsConstructor
@@ -20,6 +21,7 @@ public abstract class AbstractTask<T> implements Closeable {
     public void printAnswers() {
         System.out.printf("Day %s:\n", getDayNumber());
         List<T> data = mapData(resourceManager.getData(String.format("https://adventofcode.com/2022/day/%d/input", getDayNumber())));
+        Objects.requireNonNull(data, "Пустые вхожные параметры");
         System.out.printf("Answer to Day %d \n\t\tPart 1 task: %s\n\t\tPart 2 task: %s\n", getDayNumber(), getPartOneAnswer(data), getPartTwoAnswer(data));
     }
 
