@@ -12,6 +12,7 @@ import java.util.List;
 public class Main {
 
     private static final List<AbstractTask<?>> TASK_LIST = List.of(
+            new Day7(),
             new Day6(),
             new Day5(),
             new Day4(),
@@ -23,7 +24,7 @@ public class Main {
     public static void main(String[] args) {
         TASK_LIST.stream()
                 .sorted(Comparator.comparingInt(AbstractTask::getDayNumber))
-                .filter(t -> t.getDayNumber() == 6)
+                .filter(t -> t.getDayNumber() == 7)
                 .forEach(AbstractTask::printAnswers);
         try {
             for (AbstractTask<?> abstractTask : TASK_LIST) {

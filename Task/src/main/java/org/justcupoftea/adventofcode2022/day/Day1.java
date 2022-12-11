@@ -10,10 +10,6 @@ import java.util.List;
 public class Day1 extends AbstractTask<List<Integer>> {
 
 
-    public Day1() {
-        super(1);
-    }
-
     @Override
     protected List<Integer> mapData(String data) {
         return Arrays.stream(data.split("\n\n"))

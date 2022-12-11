@@ -20,10 +20,6 @@ public class Day3 extends AbstractTask<List<String>> {
     public static final int START = 27;
     public static final int END = 52;
 
-    public Day3() {
-        super(3);
-    }
-
     @Override
     protected List<String> mapData(@NonNull String data) {
         return Arrays.stream(data.split("\n")).toList();

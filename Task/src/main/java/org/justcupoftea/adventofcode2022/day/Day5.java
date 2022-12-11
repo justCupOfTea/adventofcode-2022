@@ -10,9 +10,6 @@ import java.util.stream.IntStream;
 @Slf4j
 public class Day5 extends AbstractTask<List<String>> {
 
-    public Day5() {
-        super(5);
-    }
 
     @Override
     protected List<String> mapData(@NonNull String data) {

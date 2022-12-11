@@ -10,9 +10,6 @@ import java.util.List;
 
 @Slf4j
 public class Day4 extends AbstractTask<List<Pair<Integer>>> {
-    public Day4() {
-        super(4);
-    }
 
     @Override
     protected List<Pair<Integer>> mapData(@NonNull String data) {

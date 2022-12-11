@@ -17,11 +17,17 @@ public abstract class AbstractTask<T> implements Closeable {
 
 
     public static final String ERROR_PARAMS = "Не верное кол-во параметров. %s";
+
     public void printAnswers() {
         System.out.printf("Day %s:\n", getDayNumber());
         T data = mapData(resourceManager.getData(String.format("https://adventofcode.com/2022/day/%d/input", getDayNumber())));
         Objects.requireNonNull(data, "Пустые вхожные параметры");
         System.out.printf("Answer to Day %d \n\t\tPart 1 task: %s\n\t\tPart 2 task: %s\n", getDayNumber(), getPartOneAnswer(data), getPartTwoAnswer(data));
+    }
+
+    public AbstractTask() {
+        String digs = this.getClass().getSimpleName().replaceAll("\\D", "");
+        this.dayNumber = Integer.parseInt(digs);
     }
 
     protected abstract T mapData(@NonNull String data);

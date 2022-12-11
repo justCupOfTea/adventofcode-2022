@@ -7,10 +7,6 @@ import java.util.LinkedHashSet;
 import java.util.Set;
 
 public class Day6 extends AbstractTask<String> {
-    public Day6() {
-        super(6);
-    }
-
 
     @Override
     protected String mapData(@NonNull String data) {

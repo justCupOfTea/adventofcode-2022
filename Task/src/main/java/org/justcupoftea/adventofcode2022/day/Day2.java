@@ -15,10 +15,6 @@ import java.util.List;
 public class Day2 extends AbstractTask<List<Day2.Round>> {
     private static final RockPaperScissorsComparator comparator = new RockPaperScissorsComparator();
 
-    public Day2() {
-        super(2);
-    }
-
     @Override
     protected List<Day2.Round> mapData(String data) {
         return Arrays.stream(data.split("\n"))
