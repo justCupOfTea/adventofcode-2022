@@ -12,7 +12,7 @@ import java.util.Comparator;
 import java.util.List;
 
 @Slf4j
-public class Day2 extends AbstractTask<Day2.Round> {
+public class Day2 extends AbstractTask<List<Day2.Round>> {
     private static final RockPaperScissorsComparator comparator = new RockPaperScissorsComparator();
 
     public Day2() {

@@ -9,7 +9,7 @@ import java.util.Arrays;
 import java.util.List;
 
 @Slf4j
-public class Day3 extends AbstractTask<String> {
+public class Day3 extends AbstractTask<List<String>> {
 
     public static final char a = 'a';
     public static final char z = 'z';

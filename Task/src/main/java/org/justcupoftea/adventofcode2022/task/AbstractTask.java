@@ -6,7 +6,6 @@ import lombok.RequiredArgsConstructor;
 
 import java.io.Closeable;
 import java.io.IOException;
-import java.util.List;
 import java.util.Objects;
 
 @Getter
@@ -20,17 +19,17 @@ public abstract class AbstractTask<T> implements Closeable {
     public static final String ERROR_PARAMS = "Не верное кол-во параметров. %s";
     public void printAnswers() {
         System.out.printf("Day %s:\n", getDayNumber());
-        List<T> data = mapData(resourceManager.getData(String.format("https://adventofcode.com/2022/day/%d/input", getDayNumber())));
+        T data = mapData(resourceManager.getData(String.format("https://adventofcode.com/2022/day/%d/input", getDayNumber())));
         Objects.requireNonNull(data, "Пустые вхожные параметры");
         System.out.printf("Answer to Day %d \n\t\tPart 1 task: %s\n\t\tPart 2 task: %s\n", getDayNumber(), getPartOneAnswer(data), getPartTwoAnswer(data));
     }
 
-    protected abstract List<T> mapData(@NonNull String data);
+    protected abstract T mapData(@NonNull String data);
 
 
-    protected abstract String getPartOneAnswer(@NonNull List<T> data);
+    protected abstract String getPartOneAnswer(@NonNull T data);
 
-    protected abstract String getPartTwoAnswer(@NonNull List<T> data);
+    protected abstract String getPartTwoAnswer(@NonNull T data);
 
     public void close() throws IOException {
         resourceManager.close();

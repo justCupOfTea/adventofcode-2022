@@ -7,7 +7,7 @@ import java.util.Comparator;
 import java.util.List;
 
 
-public class Day1 extends AbstractTask<Integer> {
+public class Day1 extends AbstractTask<List<Integer>> {
 
 
     public Day1() {

@@ -8,7 +8,7 @@ import java.util.*;
 import java.util.stream.IntStream;
 
 @Slf4j
-public class Day5 extends AbstractTask<String> {
+public class Day5 extends AbstractTask<List<String>> {
 
     public Day5() {
         super(5);
